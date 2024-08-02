@@ -11,5 +11,8 @@ COPY ./bin/* /usr/local/bin/
 # Ensure the binaries have execute permissions
 RUN chmod +x /usr/local/bin/*
 
+# Install other Alpine dependencies
+RUN apk add --update --no-cache openssh-client ca-certificates bash
+
 # Set the default command to run when the container starts
-CMD ["sh"]
+CMD ["bash"]
