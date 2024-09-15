@@ -23,25 +23,37 @@ Install easily binaries from github releases
 
 Build image
 
+Env: DOCKER=docker
+Inputs: DOCKER
+Interactive: true
+
 ```
 export RELEASE=$(date +%Y%m%d%H%M)
-docker build -t digiosysops/deploy-tools:$RELEASE -t digiosysops/deploy-tools:latest .
+$DOCKER build -t digiosysops/deploy-tools:$RELEASE -t digiosysops/deploy-tools:latest .
 ```
 
 ### push
 
 Push image to dockerhub
 
+Env: DOCKER=docker
+Inputs: DOCKER
+Interactive: true
+
 ```
 LAST_IMAGE=$(docker images --format "{{.Repository}}:{{.Tag}}" | grep "digiosysops/deploy-tools:" | grep -v "latest" | sort -r | head -n 1)
-docker push $LAST_IMAGE
-docker push digiosysops/deploy-tools:latest
+$DOCKER push $LAST_IMAGE
+$DOCKER push digiosysops/deploy-tools:latest
 ```
 
 ### clean
 
 Remove all images with tag  digiosysops/deploy-tools:tag
 
+Env: DOCKER=docker
+Inputs: DOCKER
+Interactive: true
+
 ```
-docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}" | grep "digiosysops/deploy-tools:" | sort -r)
+$DOCKER rmi $(docker images --format "{{.Repository}}:{{.Tag}}" | grep "digiosysops/deploy-tools:" | sort -r)
 ```
