@@ -14,6 +14,9 @@ Other light client for AWS SDK in binary, good functionality
 * [CAPZE](https://github.com/yuuki/capze)
 Creates and automatize move code following the [Capistrano](https://capistranorb.com/) folder structure
 
+* [STEW](https://github.com/marwanhawari/stew)
+Install easily binaries from github releases
+
 ## Tasks
 
 ### build
@@ -21,7 +24,7 @@ Creates and automatize move code following the [Capistrano](https://capistranorb
 Build image
 
 ```
-export RELEASE=$(date +%Y%m%d%H%M) 
+export RELEASE=$(date +%Y%m%d%H%M)
 docker build -t digiosysops/deploy-tools:$RELEASE -t digiosysops/deploy-tools:latest .
 ```
 

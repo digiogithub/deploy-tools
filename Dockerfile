@@ -4,12 +4,17 @@ FROM alpine:latest
 # Set the working directory
 WORKDIR /app
 
-# Copy all binaries from the local ./bin/ directory to /usr/local/bin
-# /usr/local/bin is typically included in the PATH
-COPY ./bin/* /usr/local/bin/
+# Download stew binary manager from apk and remove the apk
+RUN curl -L https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew_0.4.0_linux_amd64.apk && \
+    apk add --allow-untrusted stew_0.4.0_linux_amd64.apk && \
+    rm stew_0.4.0_linux_amd64.apk
 
-# Ensure the binaries have execute permissions
-RUN chmod +x /usr/local/bin/*
+RUN mkdir -p $HOME/.config/stew && \
+    mkdir -p $HOME/.local/share/stew && \
+    cp stew.config.json $HOME/.config/stew/ && \
+    cp Stewfile.lock.json $HOME && \
+    stew install $HOME/Stewfile.lock.json && \
+    rm -rf $HOME/.local/share/stew/pkg
 
 # Install other Alpine dependencies
 RUN apk add --update --no-cache openssh-client ca-certificates bash

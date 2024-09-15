@@ -1,0 +1,56 @@
+{
+  "os": "linux",
+  "arch": "amd64",
+  "packages": [
+    {
+      "source": "github",
+      "owner": "joerdav",
+      "repo": "xc",
+      "tag": "v0.8.0",
+      "asset": "xc_0.8.0_linux_amd64",
+      "binary": "xc",
+      "url": "https://api.github.com/repos/joerdav/xc/releases/assets/145700987",
+      "binaryHash": "afd19b873b768cc6b7ac838f06488c807000f6af9667133d56abbaaec270f4e5"
+    },
+    {
+      "source": "github",
+      "owner": "kohkimakimoto",
+      "repo": "essh",
+      "tag": "v3.4.0",
+      "asset": "essh_linux_amd64.zip",
+      "binary": "essh",
+      "url": "https://api.github.com/repos/kohkimakimoto/essh/releases/assets/19635790",
+      "binaryHash": "38daafff938344da710b7c37a1e993c8eaefb0bb16eb4148e17b5e7b7015098e"
+    },
+    {
+      "source": "github",
+      "owner": "wallix",
+      "repo": "awless",
+      "tag": "v0.1.11",
+      "asset": "awless-linux-amd64.tar.gz",
+      "binary": "awless",
+      "url": "https://api.github.com/repos/wallix/awless/releases/assets/7614967",
+      "binaryHash": "e4dbb78e17b2f0f8cb35fd900e3002f27530b0c0cb170bf7a91abe871d4a567f"
+    },
+    {
+      "source": "github",
+      "owner": "minamijoyo",
+      "repo": "myaws",
+      "tag": "v0.4.9",
+      "asset": "myaws_v0.4.9_linux_amd64.tar.gz",
+      "binary": "myaws",
+      "url": "https://api.github.com/repos/minamijoyo/myaws/releases/assets/186693036",
+      "binaryHash": "7d5358adbdaefc01dd3ae0f1c3da49ae9db1b1b198f2e5413d24067af6232dcb"
+    },
+    {
+      "source": "github",
+      "owner": "yuuki",
+      "repo": "capze",
+      "tag": "v0.2.2",
+      "asset": "capze_linux_amd64",
+      "binary": "capze",
+      "url": "https://api.github.com/repos/yuuki/capze/releases/assets/4819113",
+      "binaryHash": "6ac902b7541dc0a1946fcfae961b2170223a71a04b23fddd4b5788187768894b"
+    }
+  ]
+}
